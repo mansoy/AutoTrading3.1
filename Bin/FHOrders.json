@@ -1,0 +1,48 @@
+{                                  
+	"orderNo": "XSSCDD20150714182054614", 
+	"taskType": 0,                   
+	"gameArea": "电信",              
+	"gameSvr": "湖北4区", 
+	"key": "XSSCDD20150714182054614",
+	"consoleId": "C01",              
+	"isBusy": false,                 	                  
+	"roles": [                       
+		{                              
+			"rowId": 0,                  
+			"isMain": false,             
+			"account": "1329663158",         
+			"passWord": "S2NHQXIzODAyNA==",  
+			"roleID": 123,               
+			"role": "为了你、",          
+			"receiptRole": "88697",          
+			"receiptLevel": 85,              
+			"checkLevel": false,             
+			"safetyWay": 50,                 
+			"sendNum": 2,                
+			"eachNum": 2,                
+			"stock": 189,               
+			"reStock": 0,                
+			"taskState": 15,
+			"logMsg": ""
+		},                             
+		{                              
+			"rowId": 1,                  
+			"isMain": false,             
+			"account": "1329663158",         
+			"passWord": "S2NHQXIzODAyNA==",  
+			"roleID": 124,               
+			"role": "方兴网店",          
+			"receiptRole": "88697",      
+			"receiptLevel": 85,          
+			"checkLevel": false,         
+			"safetyWay": 50,             
+			"sendNum": 3,                
+			"eachNum": 3,                
+			"stock": 2481,               
+			"reStock": 0,                
+			"taskState": 15,
+			"logMsg": ""
+		}                              
+	],                               
+	"saleNum": 5                     
+}
