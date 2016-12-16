@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, System.SysUtils, System.Classes, Winapi.Messages,
-  uWinIO;
+  uMsKm;
 
   function IoPressPwd(APwd: string; ADealy: Cardinal = 100): Boolean;
   function IoPressKey(AKeyCode: Integer; AShift: Boolean = False): Boolean;
@@ -130,7 +130,7 @@ begin
     begin
       bCode := StrToIntDef(GKeyMapLstCode.Values[APwd[i]], 0);
     end;
-    uWinIO.MsKeyPress(bCode, bShift);
+    uMsKm.MsKmKeyPress(bCode, bShift);
   except
   end;
 end;

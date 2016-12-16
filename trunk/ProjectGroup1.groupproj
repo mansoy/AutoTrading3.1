@@ -18,6 +18,9 @@
         <Projects Include="TradeModule\TradeTest.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="IoPress\IoPress.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -71,14 +74,23 @@
     <Target Name="TradeTest:Make">
         <MSBuild Projects="TradeModule\TradeTest.dproj" Targets="Make"/>
     </Target>
+    <Target Name="IoPress">
+        <MSBuild Projects="IoPress\IoPress.dproj"/>
+    </Target>
+    <Target Name="IoPress:Clean">
+        <MSBuild Projects="IoPress\IoPress.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="IoPress:Make">
+        <MSBuild Projects="IoPress\IoPress.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="DToolClient;DToolServer;ResumeThread;TradeModule;TradeTest"/>
+        <CallTarget Targets="DToolClient;DToolServer;ResumeThread;TradeModule;TradeTest;IoPress"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="DToolClient:Clean;DToolServer:Clean;ResumeThread:Clean;TradeModule:Clean;TradeTest:Clean"/>
+        <CallTarget Targets="DToolClient:Clean;DToolServer:Clean;ResumeThread:Clean;TradeModule:Clean;TradeTest:Clean;IoPress:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="DToolClient:Make;DToolServer:Make;ResumeThread:Make;TradeModule:Make;TradeTest:Make"/>
+        <CallTarget Targets="DToolClient:Make;DToolServer:Make;ResumeThread:Make;TradeModule:Make;TradeTest:Make;IoPress:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
