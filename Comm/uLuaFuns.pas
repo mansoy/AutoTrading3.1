@@ -654,20 +654,22 @@ end;
 function TLuaFuns.MsPressPassWord(L: lua_State): Integer;
 var
   ArgCount: Integer;
+  vHPwd: HWND;
   vPassWord: string;
   bRet: Boolean;
 begin
   Result := 1;
   try
     ArgCount := Lua_GetTop(L);
-    vPassWord := string(AnsiString(lua_tostring(L, 2)));
+    vHPwd := HWND(Lua_ToInteger(L, 2));
+    vPassWord := string(AnsiString(lua_tostring(L, 3)));
     Lua_Pop(L, Lua_GetTop(L));
-    if ArgCount < 2 then
+    if ArgCount < 3 then
     begin
       Lua_PushInteger(L, RetErr);
       Exit;
     end;
-    bRet := GCommFuns.PressPassWord(vPassWord, 100);
+    bRet := GCommFuns.PressPassWord(vHPwd, vPassWord, 100);
     if not bRet then
     begin
       Lua_PushInteger(L, RetErr);

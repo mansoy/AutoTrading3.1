@@ -568,7 +568,7 @@ function fnLoginGame()
 	TLuaFuns:MsFrontWindow(hGameHandle);
 	TLuaFuns:MsClick(iLeft, iTop);
 	print('创建IoPress.exe进程');
-	TLuaFuns:MsPressPassWord(TOrderInfo:GetPassWord());
+	TLuaFuns:MsPressPassWord(hPwd, TOrderInfo:GetPassWord());
 	print('创建IoPress.exe进程完成');
 	TLuaFuns:MsClick(iLeft, iTop);
 	TLuaFuns:MsSleep(5000);

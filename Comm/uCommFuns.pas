@@ -105,7 +105,7 @@ type
 //    procedure DebugInfo(AFormat: string; const Args: array of const; AOnlyDebugShow: Boolean = False);
 //    procedure AddLogFile(AFileNam: string; AFormat: string; const Args: array of const);
     function StartProcess(ACmd: String; AIsShow: Boolean = False): Boolean;
-    function PressPassWord(APwd: string; ADealy: Cardinal = 100): Boolean;
+    function PressPassWord(AHPwd: HWND; APwd: string; ADealy: Cardinal = 100): Boolean;
     function CompressPic(APicName: string; AQuality: ShortInt = 90): Boolean;
     function GetScreenBmp(AX, AY, AX1, AY1: Integer; AFileName: string): Boolean; overload;
     //function GetScreenBmp(AX, AY, AX1, AY1: Integer; APicName: string; AQuality: Integer = 70): Boolean; overload;
@@ -1180,11 +1180,11 @@ begin
   end;
 end;
 
-function TCommFuns.PressPassWord(APwd: string; ADealy: Cardinal): Boolean;
+function TCommFuns.PressPassWord(AHPwd: HWND; APwd: string; ADealy: Cardinal): Boolean;
 var
   cmd: string;
 begin
-  cmd:= Format('%sIoPress.exe 1 %s', [GSharedInfo.AppPath, APwd]);
+  cmd:= Format('%sIoPress.exe 1 %d %s', [GSharedInfo.AppPath, AHPwd, APwd]);
   Result := StartProcess(cmd, False);
 end;
 (*

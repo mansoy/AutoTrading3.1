@@ -8,13 +8,13 @@ uses
   Winapi.Windows,
   Winapi.Messages,
   System.SysUtils,
-  PressStr in '..\Comm\PressStr.pas',
-  uWinIO in '..\Comm\uWinIO.pas',
-  ManSoy.Encode in '..\Comm\ManSoy.Encode.pas';
+  uMsKm in '..\Comm\uMsKm.pas',
+  ManSoy.Encode in '..\Global\ManSoy.Encode.pas';
 
 var
   iCmd: Integer;
   sPwd: string;
+  hPwd: HWND;
 begin
   try
     { TODO -oUser -cConsole Main : Insert code here }
@@ -32,13 +32,14 @@ begin
     //Sleep(2000);
     if (iCmd = 1) then
     begin
-      sPwd := ManSoy.Encode.Base64ToStr(ParamStr(2));
-      PressStr.IoPressPwd(sPwd);
+      sPwd := ManSoy.Encode.Base64ToStr(ParamStr(3));
+      hPwd := StrToIntDef(ParamStr(2), 0);
+      uMsKm.MsKmPressPassword(hPwd, PAnsiChar(AnsiString(sPwd)));
     end;
 
     if iCmd = 2 then
     begin
-      PressStr.IoPressKey(StrToIntDef(ParamStr(2), 0));
+      uMsKm.MsKmKeyPress(StrToIntDef(ParamStr(2), 0));
     end;
   except
     on E: Exception do
