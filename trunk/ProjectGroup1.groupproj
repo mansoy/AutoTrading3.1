@@ -1,0 +1,84 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{1DAA04DC-9AAC-48D2-89BB-B70836ACF087}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="TradeClient\DToolClient.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Console\DToolServer.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ResumeThread\ResumeThread.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="TradeModule\TradeModule.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="TradeModule\TradeTest.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="DToolClient">
+        <MSBuild Projects="TradeClient\DToolClient.dproj"/>
+    </Target>
+    <Target Name="DToolClient:Clean">
+        <MSBuild Projects="TradeClient\DToolClient.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DToolClient:Make">
+        <MSBuild Projects="TradeClient\DToolClient.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DToolServer">
+        <MSBuild Projects="Console\DToolServer.dproj"/>
+    </Target>
+    <Target Name="DToolServer:Clean">
+        <MSBuild Projects="Console\DToolServer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DToolServer:Make">
+        <MSBuild Projects="Console\DToolServer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ResumeThread">
+        <MSBuild Projects="ResumeThread\ResumeThread.dproj"/>
+    </Target>
+    <Target Name="ResumeThread:Clean">
+        <MSBuild Projects="ResumeThread\ResumeThread.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ResumeThread:Make">
+        <MSBuild Projects="ResumeThread\ResumeThread.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TradeModule">
+        <MSBuild Projects="TradeModule\TradeModule.dproj"/>
+    </Target>
+    <Target Name="TradeModule:Clean">
+        <MSBuild Projects="TradeModule\TradeModule.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TradeModule:Make">
+        <MSBuild Projects="TradeModule\TradeModule.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TradeTest">
+        <MSBuild Projects="TradeModule\TradeTest.dproj"/>
+    </Target>
+    <Target Name="TradeTest:Clean">
+        <MSBuild Projects="TradeModule\TradeTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TradeTest:Make">
+        <MSBuild Projects="TradeModule\TradeTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="DToolClient;DToolServer;ResumeThread;TradeModule;TradeTest"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="DToolClient:Clean;DToolServer:Clean;ResumeThread:Clean;TradeModule:Clean;TradeTest:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="DToolClient:Make;DToolServer:Make;ResumeThread:Make;TradeModule:Make;TradeTest:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
