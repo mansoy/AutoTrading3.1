@@ -568,12 +568,14 @@ function fnLoginGame()
 	TLuaFuns:MsFrontWindow(hGameHandle);
 	TLuaFuns:MsClick(iLeft, iTop);
 	print('创建IoPress.exe进程');
-	TLuaFuns:MsPressPassWord(hPwd, TOrderInfo:GetPassWord());
+	TLuaFuns:MsPressPassWord(0, TOrderInfo:GetPassWord());
 	print('创建IoPress.exe进程完成');
+	TLuaFuns:MsFrontWindow(hGameHandle);
 	TLuaFuns:MsClick(iLeft, iTop);
 	TLuaFuns:MsSleep(5000);
 	print('点击回车');
-	TLuaFuns:MsPressEnter();
+	--TLuaFuns:MsPressEnter();
+	TLuaFuns:MsClick(iLeft, iTop+120);
 	TLuaFuns:MsPostStatus('密码输入完成，开始登陆校验...');
 	--登录判断
 	iRet = fnLoginValidate();

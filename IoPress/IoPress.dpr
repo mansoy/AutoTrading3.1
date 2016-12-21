@@ -29,7 +29,7 @@ begin
       MessageBox(0, '传入参数类型错误', '提示', MB_ICONINFORMATION);
       Exit;
     end;
-    //Sleep(2000);
+    Sleep(2000);
     if (iCmd = 1) then
     begin
       sPwd := ManSoy.Encode.Base64ToStr(ParamStr(3));
