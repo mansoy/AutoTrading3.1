@@ -1199,7 +1199,8 @@ begin
     Exit;
   end;
   sCmd := Format('rasdial VPN %s %s', [AUserName, APassword]);
-  WinExec(PAnsiChar(sCmd), SW_HIDE);
+  WinExec(PAnsiChar(AnsiString(sCmd)), SW_HIDE);
+  //WinExec('rasdial VPN 1 17', SW_HIDE);
   Sleep(3000);
   Result := True;
 end;
