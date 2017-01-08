@@ -42,6 +42,14 @@ type
     Label4: TLabel;
     edtTheHost: TEdit;
     btnSelTheHost: TButton;
+    Bevel6: TBevel;
+    Label9: TLabel;
+    Label11: TLabel;
+    edtVpnUserName: TEdit;
+    edtVpnPassword: TEdit;
+    chkUseVpn: TCheckBox;
+    Label12: TLabel;
+    edtVpnHost: TEdit;
     procedure btnSaveClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btnSelTheHostClick(Sender: TObject);
@@ -167,6 +175,11 @@ begin
     edtDama2User.Text           := GSharedInfo.ClientSet.Dama2User;
     edtDama2Pwd.Text            := GSharedInfo.ClientSet.Dama2Pwd;
     //-------------------------------------------------------------------------
+    chkUseVpn.Checked           := GSharedInfo.ClientSet.UseVpn;
+    edtVpnHost.Text             := GSharedInfo.ClientSet.VpnServerName;
+    edtVpnUserName.Text         := GSharedInfo.ClientSet.VpnUserName;
+    edtVpnPassword.Text         := GSharedInfo.ClientSet.VpnPassword;
+    //-------------------------------------------------------------------------
     chkAutoReConn.Checked       := GSharedInfo.ClientSet.AutoConn;
     chkMultiRoleFlip.Checked    := GSharedInfo.ClientSet.MutiRoleFenYe;
     chkAutoRun.Checked          := GSharedInfo.ClientSet.AutoRun;
@@ -198,6 +211,11 @@ begin
     GSharedInfo.ClientSet.UseDama2          := chkUseDama2.Checked;
     GSharedInfo.ClientSet.Dama2User         := Trim(edtDama2User.Text);
     GSharedInfo.ClientSet.Dama2Pwd          := Trim(edtDama2Pwd.Text);
+    //----------------------------------
+    GSharedInfo.ClientSet.UseVpn            := chkUseVpn.Checked;
+    GSharedInfo.ClientSet.VpnServerName     := Trim(edtVpnHost.Text);
+    GSharedInfo.ClientSet.VpnUserName       := Trim(edtVpnUserName.Text);
+    GSharedInfo.ClientSet.VpnPassword       := Trim(edtVpnPassword.Text);
     //----------------------------------
     GSharedInfo.ClientSet.AutoConn          := chkAutoReConn.Checked;
     GSharedInfo.ClientSet.MutiRoleFenYe     := chkMultiRoleFlip.Checked;

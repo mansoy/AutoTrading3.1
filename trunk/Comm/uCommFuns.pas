@@ -8,6 +8,7 @@ uses Winapi.Windows, System.Classes, WinApi.ActiveX, System.SysUtils, Vcl.Forms,
      , ManSoy.Encode
      , ManSoy.Global
      , uGlobal
+     , uMsVpn
      , Dm_TLB;
 
 type
@@ -104,6 +105,7 @@ type
 //    procedure AddLogMsg(AFormat: string; const Args: array of const; AOnlyDebugShow: Boolean = False);
 //    procedure DebugInfo(AFormat: string; const Args: array of const; AOnlyDebugShow: Boolean = False);
 //    procedure AddLogFile(AFileNam: string; AFormat: string; const Args: array of const);
+    function VpnConnect(AServerName: string; AUserName: string; APassword: string): Boolean;
     function StartProcess(ACmd: String; AIsShow: Boolean = False): Boolean;
     function PressPassWord(AHPwd: HWND; APwd: string; ADealy: Cardinal = 100): Boolean;
     function CompressPic(APicName: string; AQuality: ShortInt = 90): Boolean;
@@ -1178,6 +1180,28 @@ begin
     on E: Exception do
       uGlobal.AddLogMsg('∆Ù∂ØIoPress.exe“Ï≥£[%s]',[E.Message]);
   end;
+end;
+
+function TCommFuns.VpnConnect(AServerName, AUserName, APassword: string): Boolean;
+var
+  sCmd: string;
+begin
+  Result := False;
+  if Trim(AServerName) = '' then Exit;
+  if Trim(AUserName) = '' then Exit;
+  if Trim(APassword) = '' then Exit;
+
+  WinExec('rasphone.exe -h vpn', SW_HIDE);
+  Sleep(1000);
+  if not Create_VPN_Connection('VPN', AnsiString(Trim(AServerName)), AnsiString(Trim(AUserName)), AnsiString(Trim(APassword))) then
+  begin
+    AddLogMsg('VPN ≤¶∫≈ ß∞‹', []);
+    Exit;
+  end;
+  sCmd := Format('rasdial VPN %s %s', [AUserName, APassword]);
+  WinExec(PAnsiChar(sCmd), SW_HIDE);
+  Sleep(3000);
+  Result := True;
 end;
 
 function TCommFuns.PressPassWord(AHPwd: HWND; APwd: string; ADealy: Cardinal): Boolean;

@@ -85,6 +85,11 @@ type
     Dama2User         : string;
     Dama2Pwd          : string;
 
+    UseVpn            : Boolean;
+    VpnServerName     : string;
+    VpnUserName       : string;
+    VpnPassword       : string;
+
     TokenHost         : string;
     TokenPort         : Word;
 
@@ -212,6 +217,11 @@ begin
       end;
     end;
     //------------------------------------------------------------------------
+    GSharedInfo.ClientSet.UseVpn        := iniLocalFile.ReadBool('VPN', '使用VPN', False);
+    GSharedInfo.ClientSet.VpnServerName := iniLocalFile.ReadString('VPN', '服务器', '');
+    GSharedInfo.ClientSet.VpnUserName   := iniLocalFile.ReadString('VPN', '账号', '');
+    GSharedInfo.ClientSet.VpnPassword   := ManSoy.Encode.Base64ToStr(iniLocalFile.ReadString('VPN', '密码', ''));
+    //------------------------------------------------------------------------
     GSharedInfo.ClientSet.TokenHost         := iniLocalFile.ReadString('设置', '令牌机IP', '');
     GSharedInfo.ClientSet.TokenPort         := iniLocalFile.ReadInteger('设置', '令牌机端口', 0);
     //------------------------------------------------------------------------
@@ -274,6 +284,12 @@ begin
     sTmp := ManSoy.Encode.StrToBase64(GSharedInfo.ClientSet.Dama2User);
     sTmp := sTmp + '|' + ManSoy.Encode.StrToBase64(GSharedInfo.ClientSet.Dama2Pwd);
     iniLocalFile.WriteString('设置', '打码兔', sTmp);
+    //------------------------------------------------------------------------
+    iniLocalFile.WriteBool('VPN', '使用VPN', GSharedInfo.ClientSet.UseVpn);
+    iniLocalFile.WriteString('VPN', '服务器', GSharedInfo.ClientSet.VpnServerName);
+    iniLocalFile.WriteString('VPN', '账号', GSharedInfo.ClientSet.VpnUserName);
+    iniLocalFile.WriteString('VPN', '密码', ManSoy.Encode.StrToBase64(GSharedInfo.ClientSet.VpnPassword));
+
 
     //------------------------------------------------------------------------
     //iniLocalFile.WriteString('设置', '令牌机IP', GSharedInfo.ClientSet.TokenHost);

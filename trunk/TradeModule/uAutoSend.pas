@@ -193,6 +193,8 @@ begin
     except
       AddLogMsg('÷¥––Ω≈±æ“Ï≥£...', [], True);
     end;
+    if GSharedInfo.ClientSet.UseVpn then GCommFuns.VpnConnect(GSharedInfo.ClientSet.VpnServerName, GSharedInfo.ClientSet.VpnUserName, GSharedInfo.ClientSet.VpnPassword);
+
   finally
     EndTask();
     {$IFNDEF DEBUG}
