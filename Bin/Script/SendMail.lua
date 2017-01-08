@@ -2024,7 +2024,7 @@ function Test()
 	print('开始测试...');
 	--os.execute("start IoPress.exe 1 a2V5YX4hQCMkfiUkfiVeKiYoKCkpeWEiOiIuPzwvLg==");
 	--TLuaFuns:MsPressPassWord(TOrderInfo:GetPassWord());
-
+	
 	local hGame = 0;
 	local iY = -1; 
 	local iX = -1; 
@@ -2042,6 +2042,7 @@ function Test()
 
 	fnLoginGame();
 	
+	print('完成测试...');
 end
 
 Test();

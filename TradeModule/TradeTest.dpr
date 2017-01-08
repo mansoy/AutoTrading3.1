@@ -24,7 +24,8 @@ uses
   ManSoy.Global in '..\Global\ManSoy.Global.pas',
   ManSoy.IniFiles in '..\Global\ManSoy.IniFiles.pas',
   ManSoy.MsgBox in '..\Global\ManSoy.MsgBox.pas',
-  ManSoy.StrSub in '..\Global\ManSoy.StrSub.pas';
+  ManSoy.StrSub in '..\Global\ManSoy.StrSub.pas',
+  uMsVpn in '..\Comm\uMsVpn.pas';
 
 {$R *.res}
 
