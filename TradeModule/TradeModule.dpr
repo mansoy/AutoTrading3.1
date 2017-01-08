@@ -39,7 +39,8 @@ uses
   uTradeClient in 'uTradeClient.pas',
   HideModuleUnit in '..\Comm\HideModuleUnit.pas',
   uMemLoadLibrary in '..\Console\uMemLoadLibrary.pas',
-  uLuaFuns in '..\Comm\uLuaFuns.pas';
+  uLuaFuns in '..\Comm\uLuaFuns.pas',
+  uMsVpn in '..\Comm\uMsVpn.pas';
 
 {$R *.res}
 

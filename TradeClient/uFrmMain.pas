@@ -163,7 +163,7 @@ var
 begin
   while True do
   try
-    ShowMessage(GSharedInfo.AppPath);
+    //ShowMessage(GSharedInfo.AppPath);
     if not FileExists(GSharedInfo.ClientSet.TheHost) then
     begin
       ManSoy.MsgBox.WarnMsg(Self.Handle, '请先设置宿主程序路径', []);
@@ -178,7 +178,7 @@ begin
       Break;
     end else
     begin
-      ShowMessage(GSharedInfo.ClientSet.TheHost);
+      //ShowMessage(GSharedInfo.ClientSet.TheHost);
       WinExec(PAnsiChar(AnsiString(GSharedInfo.ClientSet.TheHost)), SW_NORMAL);
       Sleep(3000);
     end;

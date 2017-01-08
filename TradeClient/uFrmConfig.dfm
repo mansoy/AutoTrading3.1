@@ -4,7 +4,7 @@ object FrmConfig: TFrmConfig
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = #37197#32622
-  ClientHeight = 330
+  ClientHeight = 408
   ClientWidth = 461
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -17,19 +17,19 @@ object FrmConfig: TFrmConfig
   OnCreate = FormCreate
   DesignSize = (
     461
-    330)
+    408)
   PixelsPerInch = 96
   TextHeight = 13
   object Label8: TLabel
     Left = 32
-    Top = 183
+    Top = 264
     Width = 48
     Height = 13
     Caption = #28216#25103#30446#24405
   end
   object Label10: TLabel
     Left = 8
-    Top = 205
+    Top = 286
     Width = 72
     Height = 13
     Caption = #25130#22270#23384#25918#30446#24405
@@ -64,7 +64,7 @@ object FrmConfig: TFrmConfig
   end
   object Bevel5: TBevel
     Left = 6
-    Top = 234
+    Top = 315
     Width = 450
     Height = 2
     Anchors = [akLeft, akTop, akRight]
@@ -127,28 +127,56 @@ object FrmConfig: TFrmConfig
   end
   object Bevel4: TBevel
     Left = 6
-    Top = 280
+    Top = 361
     Width = 450
     Height = 2
     Anchors = [akLeft, akTop, akRight]
   end
   object Label4: TLabel
     Left = 32
-    Top = 160
+    Top = 241
     Width = 48
     Height = 13
     Caption = #23487#20027#31243#24207
   end
+  object Bevel6: TBevel
+    Left = 6
+    Top = 223
+    Width = 450
+    Height = 2
+    Anchors = [akLeft, akTop, akRight]
+  end
+  object Label9: TLabel
+    Left = 28
+    Top = 192
+    Width = 48
+    Height = 13
+    Caption = #29992#25143#21517#65306
+  end
+  object Label11: TLabel
+    Left = 298
+    Top = 192
+    Width = 36
+    Height = 13
+    Caption = #23494#30721#65306
+  end
+  object Label12: TLabel
+    Left = 112
+    Top = 163
+    Width = 48
+    Height = 13
+    Caption = #26381#21153#22120#65306
+  end
   object edtGameDir: TEdit
     Left = 82
-    Top = 179
+    Top = 260
     Width = 327
     Height = 21
     TabOrder = 0
   end
   object btnSelGameDir: TButton
     Left = 415
-    Top = 180
+    Top = 261
     Width = 26
     Height = 21
     Caption = '...'
@@ -157,7 +185,7 @@ object FrmConfig: TFrmConfig
   end
   object edtCapture: TEdit
     Left = 82
-    Top = 201
+    Top = 282
     Width = 327
     Height = 21
     TabOrder = 2
@@ -165,7 +193,7 @@ object FrmConfig: TFrmConfig
   object btnSelCaptureDir: TButton
     Tag = 1
     Left = 415
-    Top = 202
+    Top = 283
     Width = 26
     Height = 21
     Caption = '...'
@@ -181,7 +209,7 @@ object FrmConfig: TFrmConfig
   end
   object chkAutoReConn: TCheckBox
     Left = 37
-    Top = 249
+    Top = 330
     Width = 97
     Height = 17
     Caption = #33258#21160#37325#36830
@@ -189,7 +217,7 @@ object FrmConfig: TFrmConfig
   end
   object chkMultiRoleFlip: TCheckBox
     Left = 155
-    Top = 249
+    Top = 330
     Width = 97
     Height = 17
     Caption = #22810#35282#33394#32763#39029
@@ -197,7 +225,7 @@ object FrmConfig: TFrmConfig
   end
   object chkAutoRun: TCheckBox
     Left = 298
-    Top = 249
+    Top = 330
     Width = 97
     Height = 17
     Caption = #24320#26426#33258#21160#21551#21160
@@ -245,7 +273,7 @@ object FrmConfig: TFrmConfig
   end
   object btnSave: TButton
     Left = 287
-    Top = 294
+    Top = 375
     Width = 75
     Height = 25
     Anchors = [akTop, akRight]
@@ -255,7 +283,7 @@ object FrmConfig: TFrmConfig
   end
   object btnCancel: TButton
     Left = 368
-    Top = 294
+    Top = 375
     Width = 75
     Height = 25
     Anchors = [akTop, akRight]
@@ -265,18 +293,48 @@ object FrmConfig: TFrmConfig
   end
   object edtTheHost: TEdit
     Left = 82
-    Top = 156
+    Top = 237
     Width = 327
     Height = 21
     TabOrder = 15
   end
   object btnSelTheHost: TButton
     Left = 415
-    Top = 157
+    Top = 238
     Width = 26
     Height = 21
     Caption = '...'
     TabOrder = 16
     OnClick = btnSelTheHostClick
+  end
+  object edtVpnUserName: TEdit
+    Left = 70
+    Top = 186
+    Width = 222
+    Height = 21
+    TabOrder = 17
+  end
+  object edtVpnPassword: TEdit
+    Left = 332
+    Top = 188
+    Width = 109
+    Height = 21
+    PasswordChar = '*'
+    TabOrder = 18
+  end
+  object chkUseVpn: TCheckBox
+    Left = 26
+    Top = 161
+    Width = 84
+    Height = 17
+    Caption = #20351#29992'VPN'
+    TabOrder = 19
+  end
+  object edtVpnHost: TEdit
+    Left = 155
+    Top = 159
+    Width = 286
+    Height = 21
+    TabOrder = 20
   end
 end
