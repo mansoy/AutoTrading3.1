@@ -182,7 +182,7 @@ var
 begin
   GetModuleFileName(HInstance, @szFilePath, 260);
   GSharedInfo.AppPath  := ExtractFilePath(string(PWideChar(@szFilePath)));
-  QLog.SetDefaultLogFile(GSharedInfo.AppPath + '\Log\AutoTride.log');
+  QLog.SetDefaultLogFile(Format('%s\Log\Logs_%s.log', [GSharedInfo.AppPath, FormatDateTime('yyyyMMdd', Now)]), 1024 * 1024 * 10, False, True);
 end;
 
 function LoadCfg: Boolean;

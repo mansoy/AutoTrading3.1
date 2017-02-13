@@ -1,7 +1,7 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
         <ProjectGuid>{29BC385A-51B5-443B-A78A-A4B355269974}</ProjectGuid>
-        <ProjectVersion>18.1</ProjectVersion>
+        <ProjectVersion>18.2</ProjectVersion>
         <FrameworkType>VCL</FrameworkType>
         <MainSource>TradeModule.dpr</MainSource>
         <Base>True</Base>
@@ -66,7 +66,7 @@
         <DCC_UsePackage>FireDACPgDriver;DBXInterBaseDriver;DataSnapServer;DataSnapCommon;DbxCommonDriver;dbxcds;CustomIPTransport;dsnap;IndyIPServer;IndyCore;CloudService;FmxTeeUI;FireDACIBDriver;dsnapxml;bindcompfmx;FireDACODBCDriver;RESTBackendComponents;dbrtl;FireDACCommon;bindcomp;inetdb;ibmonitor;xmlrtl;ibxpress;FireDACCommonDriver;soaprtl;bindengine;FMXTee;FireDACMSSQLDriver;DBXInformixDriver;DataSnapServerMidas;DBXFirebirdDriver;inet;FireDACMySQLDriver;soapmidas;DBXSybaseASADriver;RESTComponents;dbexpress;IndyIPClient;FireDACTDataDriver;FireDACSqliteDriver;FireDACDSDriver;DBXSqliteDriver;fmx;IndySystem;tethering;DataSnapClient;DataSnapProviderClient;fmxFireDAC;DBXOracleDriver;fmxase;IndyIPCommon;DataSnapFireDAC;FireDACDBXDriver;soapserver;inetdbxpress;FireDACASADriver;emsclientfiredac;rtl;DbxClientDriver;DataSnapNativeClient;IndyProtocols;DBXMySQLDriver;bindcompdbx;emsclient;FireDAC;fmxobj;FireDACOracleDriver;fmxdae;DataSnapIndy10ServerTransport;$(DCC_UsePackage)</DCC_UsePackage>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
-        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(ModuleName);FileDescription=$(ModuleName);ProductName=$(ModuleName)</VerInfo_Keys>
         <DCC_UsePackage>dxPScxSchedulerLnkRS21;cxSchedulerRibbonStyleEventEditorRS21;cxSchedulerRS21;FireDACPgDriver;dxSkinOffice2007BlueRS21;cxTreeListdxBarPopupMenuRS21;dxSkinHighContrastRS21;cxPivotGridRS21;dxSkinSevenRS21;DBXInterBaseDriver;DataSnapServer;DataSnapCommon;dxGaugeControlRS21;cxEditorsRS21;DbxCommonDriver;vclimg;cxPivotGridOLAPRS21;dxPsPrVwAdvRS21;dbxcds;dxSkinSilverRS21;DatasnapConnectorsFreePascal;dxTileControlRS21;appanalytics;dxSkinMoneyTwinsRS21;dxPSdxGaugeControlLnkRS21;vcldb;cxTreeListRS21;dxdborRS21;cxSpreadSheetRS21;dxBarExtItemsRS21;dxWizardControlRS21;dxSkinBlueprintRS21;CustomIPTransport;dsnap;IndyIPServer;dxSkinOffice2010BlackRS21;IndyCore;dxSkinsdxBarPainterRS21;dxSkinValentineRS21;CloudService;dxSkinDevExpressStyleRS21;FmxTeeUI;FireDACIBDriver;dxSkinCaramelRS21;dxPScxPCProdRS21;dxSkinOffice2013DarkGrayRS21;dxDockingRS21;dxLayoutControlRS21;dsnapxml;FireDACDb2Driver;dxSkinscxSchedulerPainterRS21;dxPSLnksRS21;dxPSdxDBOCLnkRS21;dxSkinVS2010RS21;cxLibraryRS21;frx22;bindcompfmx;dxComnRS21;cxDataRS21;FireDACODBCDriver;RESTBackendComponents;dxSkinBlackRS21;dxSkinDarkSideRS21;dbrtl;FireDACCommon;bindcomp;inetdb;dxPScxTLLnkRS21;DBXOdbcDriver;ibmonitor;vclFireDAC;xmlrtl;ibxpress;cxExportRS21;FireDACCommonDriver;dxSkinOffice2007PinkRS21;dxFlowChartRS21;soaprtl;bindengine;vclactnband;FMXTee;bindcompvcl;cxPageControlRS21;dxCoreRS21;vclie;dxSkinOffice2007BlackRS21;dxPSCoreRS21;dxPSdxDBTVLnkRS21;dxPScxCommonRS21;dxADOServerModeRS21;FireDACMSSQLDriver;DBXInformixDriver;dxSkinLilianRS21;Intraweb;dxPSTeeChartRS21;DataSnapServerMidas;dxSkinWhiteprintRS21;dsnapcon;DBXFirebirdDriver;dxNavBarRS21;inet;dxRibbonRS21;dxSkinsdxNavBarPainterRS21;FireDACMySQLDriver;soapmidas;vclx;dxSkinOffice2013WhiteRS21;cxBarEditItemRS21;dxSkinsCoreRS21;DBXSybaseASADriver;dxFireDACServerModeRS21;dxSkinSharpPlusRS21;RESTComponents;dbexpress;dxSkinSevenClassicRS21;IndyIPClient;dxThemeRS21;FireDACTDataDriver;FireDACSqliteDriver;dxSkinBlueRS21;FireDACDSDriver;frxTee22;DBXSqliteDriver;dxDBXServerModeRS21;dxSkinsdxDLPainterRS21;dxRichEditControlRS21;fmx;dxSkinMetropolisRS21;cxVerticalGridRS21;IndySystem;dxSkinMetropolisDarkRS21;TeeDB;tethering;dxSpreadSheetRS21;dxSkinGlassOceansRS21;vclib;dxSkinSummer2008RS21;DataSnapClient;dxPScxPivotGridLnkRS21;DataSnapProviderClient;dxPSPrVwRibbonRS21;DBXSybaseASEDriver;frxe22;cxGridRS21;vcldsnap;dxSpellCheckerRS21;dxSkinLondonLiquidSkyRS21;dxSkinMcSkinRS21;dxSkinOffice2010SilverRS21;dxSkinOffice2007GreenRS21;fmxFireDAC;DBXDb2Driver;dxSkinFoggyRS21;DBXOracleDriver;vclribbon;dxtrmdRS21;fmxase;vcl;dxBarExtDBItemsRS21;dxGDIPlusRS21;DBXMSSQLDriver;IndyIPCommon;CodeSiteExpressPkg;dxPSDBTeeChartRS21;dxSkinOffice2007SilverRS21;DataSnapFireDAC;FireDACDBXDriver;dxSkinStardustRS21;dxPSdxSpreadSheetLnkRS21;soapserver;dxdbtrRS21;inetdbxpress;FireDACInfxDriver;dxPScxGridLnkRS21;dxPSdxFCLnkRS21;dxSkinCoffeeRS21;adortl;FireDACASADriver;dxTabbedMDIRS21;emsclientfiredac;rtl;dxPScxSSLnkRS21;DbxClientDriver;dxorgcRS21;dxPScxExtCommonRS21;dxPSdxOCLnkRS21;dxSkinDarkRoomRS21;Tee;dxPSdxLCLnkRS21;dxMapControlRS21;DataSnapNativeClient;svnui;dxSkinSpringTimeRS21;IndyProtocols;DBXMySQLDriver;cxPivotGridChartRS21;dxSkinOffice2013LightGrayRS21;dxSkinPumpkinRS21;bindcompdbx;TeeUI;cxSchedulerTreeBrowserRS21;dxmdsRS21;dxSkinDevExpressDarkStyleRS21;frxDB22;FireDACADSDriver;vcltouch;dxSkinSharpRS21;dxSkinscxPCPainterRS21;dxServerModeRS21;emsclient;dxSkinsdxRibbonPainterRS21;VclSmp;FireDAC;VCLRESTComponents;dxBarDBNavRS21;dxSkinTheAsphaltWorldRS21;dxSkinXmas2008BlueRS21;DataSnapConnectors;dxSkinLiquidSkyRS21;cxSchedulerGridRS21;fmxobj;dxPScxVGridLnkRS21;svn;dxBarRS21;FireDACOracleDriver;fmxdae;dxSkinOffice2010BlueRS21;FireDACMSAccDriver;DataSnapIndy10ServerTransport;dxSkiniMaginaryRS21;$(DCC_UsePackage)</DCC_UsePackage>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
@@ -100,10 +100,10 @@
         <DCC_DebugInformation>0</DCC_DebugInformation>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
-        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=3.0.0.5;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=;FileVersion=3.0.0.9;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(ModuleName);FileDescription=$(ModuleName);ProductName=$(ModuleName)</VerInfo_Keys>
         <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
         <VerInfo_MajorVer>3</VerInfo_MajorVer>
-        <VerInfo_Build>5</VerInfo_Build>
+        <VerInfo_Build>9</VerInfo_Build>
         <DCC_UnitSearchPath>$(QDAC_HOME)\Source;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <DCC_DebugInformation>2</DCC_DebugInformation>
         <DCC_MapFile>3</DCC_MapFile>
@@ -288,6 +288,14 @@
                         <Extensions>.framework</Extensions>
                     </Platform>
                 </DeployClass>
+                <DeployClass Name="ProjectUWPManifest">
+                    <Platform Name="Win32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win64">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
                 <DeployClass Name="iPhone_Launch640">
                     <Platform Name="iOSSimulator">
                         <Operation>1</Operation>
@@ -401,6 +409,16 @@
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
+                <DeployClass Name="UWP_DelphiLogo44">
+                    <Platform Name="Win32">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win64">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
                 <DeployClass Name="ProjectiOSEntitlements">
                     <Platform Name="iOSDevice64">
                         <RemoteDir>..\</RemoteDir>
@@ -432,6 +450,16 @@
                 <DeployClass Name="ProjectOSXEntitlements">
                     <Platform Name="OSX32">
                         <RemoteDir>..\</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="UWP_DelphiLogo150">
+                    <Platform Name="Win32">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win64">
+                        <RemoteDir>Assets</RemoteDir>
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
