@@ -175,7 +175,7 @@ begin
   sMsg := System.SysUtils.Format(A信息, Args, FormatSettings);
   AddLogMsg(sMsg, []);
 
-  DebugInf('MS - 内容[%s]状态[%d]重启[%s]', [sMsg, Integer(ATaskState), BoolToStr(AReStart)]);
+  PostLogFile('PostStatus: 内容[%s]状态[%d]重启[%s]', [sMsg, Integer(ATaskState), BoolToStr(AReStart)]);
   GSharedInfo.OrderItem.roles[GSharedInfo.RoleIndex].taskState := Integer(ATaskState);
   GSharedInfo.OrderItem.roles[GSharedInfo.RoleIndex].logMsg := sMsg;
   if GSharedInfo.bReStart then
