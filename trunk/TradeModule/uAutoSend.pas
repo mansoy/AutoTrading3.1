@@ -170,6 +170,7 @@ begin
       GSharedInfo.RoleIndex := I;
       InitRoleImgs;
       try
+      	GSharedInfo.bReStart := True;
         ExecLua();
         //--提交当前角色的状态
         uCommand.PostState(GSharedInfo.OrderItem, GSharedInfo.RoleIndex, GSharedInfo.ClientSet.GroupName, GConsoleSet.StateInterface);

@@ -175,11 +175,12 @@ begin
   sMsg := System.SysUtils.Format(A信息, Args, FormatSettings);
   AddLogMsg(sMsg, []);
 
-  PostLogFile('PostStatus: 内容[%s]状态[%d]重启[%s]', [sMsg, Integer(ATaskState), BoolToStr(AReStart)]);
+
   GSharedInfo.OrderItem.roles[GSharedInfo.RoleIndex].taskState := Integer(ATaskState);
   GSharedInfo.OrderItem.roles[GSharedInfo.RoleIndex].logMsg := sMsg;
   if GSharedInfo.bReStart then
     GSharedInfo.bReStart := AReStart;
+  PostLogFile('PostStatus: 内容[%s]状态[%d]重启[%s-%s]', [sMsg, Integer(ATaskState), BoolToStr(AReStart), BoolToStr(GSharedInfo.bReStart)]);
   GSharedInfo.TaskStatus := ATaskState;
 
   //---添加日志列表
