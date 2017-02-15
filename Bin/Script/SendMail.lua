@@ -1233,9 +1233,12 @@ function fnCheckRoleInfo(ASendNum, IsCheckRole)
 		
 		if (iPosX ~= -1) and (iPosY ~= -1) then			
 			--TLuaFuns:MsClick(iPosX + 65, iPosY + 10);
-			TLuaFuns:MsPressEnter();
-			TLuaFuns:MsSleep(500);
-			TLuaFuns:MsPressEnter();
+			--TLuaFuns:MsPressEnter();
+			--TLuaFuns:MsSleep(500);
+			--TLuaFuns:MsPressEnter();
+			TLuaFuns:MsPressKey(39);
+			TLuaFuns:MsSleep(200);
+			TLuaFuns:MsPressKey(39);
 		else
 			iPosX, iPosY = TLuaFuns:MsFindStringEx('公告', TLuaFuns:MsGetPianSe('菜单_普通标题'));
 			if (iPosX ~= -1) and (iPosY ~= -1) then
@@ -1244,10 +1247,15 @@ function fnCheckRoleInfo(ASendNum, IsCheckRole)
 		end
 		iPosX = -1; iPosY = -1;
 	end
-	
+		
 	if (iPosX == -1) or (iPosY == -1) then
-		TLuaFuns:MsPostStatus('角色名输入失败', tsFail);
-		return 0;
+		TLuaFuns:MsPostStatus('任务暂停，请关闭角色选择框...', tsSuspend);
+		TLuaFuns:MsSleep(1000);
+		if 0 == TLuaFuns:MsCheck() then
+			return 0;
+		end
+		--TLuaFuns:MsPostStatus('角色名输入失败', tsFail);
+		--return 0;
 	end
 	
 	if not IsCheckRole then

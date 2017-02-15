@@ -100,10 +100,10 @@
         <DCC_DebugInformation>0</DCC_DebugInformation>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
-        <VerInfo_Keys>CompanyName=;FileVersion=3.0.0.9;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(ModuleName);FileDescription=$(ModuleName);ProductName=$(ModuleName)</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=;FileVersion=3.0.0.17;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(ModuleName);FileDescription=$(ModuleName);ProductName=$(ModuleName)</VerInfo_Keys>
         <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
         <VerInfo_MajorVer>3</VerInfo_MajorVer>
-        <VerInfo_Build>9</VerInfo_Build>
+        <VerInfo_Build>17</VerInfo_Build>
         <DCC_UnitSearchPath>$(QDAC_HOME)\Source;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <DCC_DebugInformation>2</DCC_DebugInformation>
         <DCC_MapFile>3</DCC_MapFile>
