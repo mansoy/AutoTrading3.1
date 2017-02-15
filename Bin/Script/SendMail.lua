@@ -1232,13 +1232,11 @@ function fnCheckRoleInfo(ASendNum, IsCheckRole)
 		iPosX, iPosY = TLuaFuns:MsFindStringEx('选择', 'ffffff-000000')
 		
 		if (iPosX ~= -1) and (iPosY ~= -1) then			
-			--TLuaFuns:MsClick(iPosX + 65, iPosY + 10);
-			--TLuaFuns:MsPressEnter();
-			--TLuaFuns:MsSleep(500);
-			--TLuaFuns:MsPressEnter();
-			TLuaFuns:MsPressKey(39);
-			TLuaFuns:MsSleep(200);
-			TLuaFuns:MsPressKey(39);
+			TLuaFuns:MsPressKey(13);
+			TLuaFuns:MsPressKey(10);
+			TLuaFuns:MsSleep(500);
+			TLuaFuns:MsPressKey(13);
+			TLuaFuns:MsPressKey(10)
 		else
 			iPosX, iPosY = TLuaFuns:MsFindStringEx('公告', TLuaFuns:MsGetPianSe('菜单_普通标题'));
 			if (iPosX ~= -1) and (iPosY ~= -1) then
@@ -2039,7 +2037,7 @@ function Test()
 	local iRet = -1;
 	--TLuaFuns:MsCreateBmp('结束游戏','CloseGame',230,200,155);
 	
-	hGame = TLuaFuns:MsFindWindow('','地下城与勇士登录程序');
+	hGame = TLuaFuns:MsFindWindow('地下城与勇士','地下城与勇士');
 	if TLuaFuns:MsIsWindow(hGame) == 0 then
 		print('游戏没有打开');
 		return;
@@ -2047,10 +2045,16 @@ function Test()
 	TLuaFuns:MsSetGameHandle(hGame);
 	print('设置游戏句柄完成');
 	
-
-	fnLoginGame();
-	
-	print('完成测试...');
+	TLuaFuns:MsSleep(3000);
+	print();
+	TLuaFuns:MsPressKey(13);
+	TLuaFuns:MsPressKey(10);
+	print('按下回车键');
+	TLuaFuns:MsSleep(500);
+	TLuaFuns:MsPressKey(13);
+	TLuaFuns:MsPressKey(10);
+	print('按下回车键');
+	print('测试完成');
 end
 
 Test();
